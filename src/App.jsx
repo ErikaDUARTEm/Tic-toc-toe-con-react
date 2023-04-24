@@ -53,9 +53,10 @@ function App() {
     window.localStorage.removeItem('turn')
   }
   return (
-      <main className='board'>
+      <main className='allGame'>
+        <section className='board'>
         <h1> Tic toc toe</h1>
-        <button onClick={resetGame}>Reset del juego</button>
+        <button className='button' onClick={resetGame}>Reset del juego</button>
         <section className='game'>
            {
              board.map((square, index)=>{
@@ -71,7 +72,10 @@ function App() {
              })
            }
         </section>
+        </section>
+      
         <section className='turn'>
+          <h2>El turno es de: </h2>
           <Square isSelected={turn === TURNS.X}>
             {TURNS.X}
           </Square>

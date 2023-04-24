@@ -3,11 +3,9 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background-color: #242424de;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,19 +26,30 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-
+.allGame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.game{
+  border: solid #09f 10px;
+}
 .board {
   width: fit-content;
   margin: 40px auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .board h1 {
   color: #eee;
-  margin-bottom: 16px;
 }
 
-.board button {
+.button {
   padding: 8px 12px;
   margin: 25px;
   background: transparent;
@@ -53,7 +62,7 @@ body {
   cursor: pointer;
 }
 
-.board button:hover {
+.button:hover {
   background: #eee;
   color: #222;
 }
@@ -71,6 +80,8 @@ body {
   width: fit-content;
   position: relative;
   border-radius: 10px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .turn .square,
